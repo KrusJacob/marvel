@@ -71,7 +71,7 @@ const SuccesFound = (props) => {
   return (
     <>
       <div className="search search-success">There is! Visit {props.char[0].name} page?</div>
-      <Link to={`/characters/${props.char[0].id}`} className="btn btn__secondary">
+      <Link to={`/marvel/characters/${props.char[0].id}`} className="btn btn__secondary">
         <div className="inner">To page</div>
       </Link>
     </>

@@ -10,6 +10,13 @@ const ComicsPage = lazy(() => import("../pages/ComicsPage"));
 const SingleComicPage = lazy(() => import("../pages/SingleComicPage"));
 const SingleCharPage = lazy(() => import("../pages/SingleCharPage"));
 
+export const URLS = {
+  main: "marvel/",
+  comics: "marvel/comics",
+  comicID: "marvel/comics/:comicId",
+  charactersID: "marvel/characters/:charId",
+};
+
 const App = () => {
   return (
     <Router>
@@ -18,10 +25,10 @@ const App = () => {
         <main>
           <Suspense fallback={<Spinner />}>
             <Routes>
-              <Route index element={<MainPage />} />
-              <Route path="/comics" element={<ComicsPage />} />
-              <Route path="/comics/:comicId" element={<SingleComicPage />} />
-              <Route path="/characters/:charId" element={<SingleCharPage />} />
+              <Route path={`${URLS.main}`} element={<MainPage />} />
+              <Route path={`${URLS.comics}`} element={<ComicsPage />} />
+              <Route path={`${URLS.comicID}`} element={<SingleComicPage />} />
+              <Route path={`${URLS.charactersID}`} element={<SingleCharPage />} />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </Suspense>
