@@ -1,0 +1,50 @@
+.comic {
+  &__list {
+    margin-top: 50px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 225px);
+    gap: 55px 67px;
+  }
+
+  &__item {
+    transition: 0.2s transform;
+    img {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+      width: 225px;
+      height: 346px;
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &-price {
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: rgba(0, 0, 0, 0.6);
+    }
+    &:hover {
+      transform: translateY(-5px);
+    }
+    &-enter {
+      opacity: 0;
+    }
+    &-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+    }
+    &-exit {
+      opacity: 1;
+    }
+    &-exit-active {
+      opacity: 0;
+      transition: opacity 500ms ease-in;
+    }
+  }
+}

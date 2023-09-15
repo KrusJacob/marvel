@@ -1,0 +1,55 @@
+@import "../../style/variables.scss";
+
+.single__comic {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 295px 550px auto;
+  gap: 50px;
+  align-items: start;
+  img {
+    width: 293px;
+    // height: 450px;
+  }
+}
+
+.comic {
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  &__descr {
+    margin-top: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__page {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__language {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 25px;
+  }
+  &__price {
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #9f0013;
+  }
+  &__back {
+    justify-self: end;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

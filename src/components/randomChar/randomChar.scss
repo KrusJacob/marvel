@@ -1,0 +1,88 @@
+@import "../../style/variables.scss";
+.randomchar {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  &__block {
+    padding: 35px 40px;
+    display: grid;
+    grid-template-columns: 180px auto;
+    column-gap: 30px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  &__descr {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .btn {
+      :first-child {
+        margin-right: 30px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__static {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: #fff;
+    padding: 35px 40px;
+    background-color: $dark;
+
+    img {
+      position: absolute;
+      right: -25px;
+      bottom: 15px;
+    }
+    button {
+      margin-top: 13px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    &:first-child {
+      margin-bottom: 33px;
+    }
+  }
+}
+
+.randomchar__block-enter {
+  opacity: 0;
+}
+.randomchar__block-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.randomchar__block-exit {
+  opacity: 1;
+}
+.randomchar__block-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}

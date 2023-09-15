@@ -1,0 +1,32 @@
+@import "../../style/variables.scss";
+.app {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    span {
+      color: $main-color;
+    }
+  }
+  &__menu {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    ul li {
+      display: inline;
+      margin: 0 7px;
+      cursor: pointer;
+
+      a {
+        transition: 0.2s all;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

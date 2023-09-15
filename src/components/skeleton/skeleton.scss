@@ -1,0 +1,32 @@
+.char__select {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.skeleton {
+  &__header {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 10px;
+    align-items: center;
+  }
+  &__circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #c4c4c4;
+  }
+  &__mini {
+    width: 100%;
+    height: 16px;
+    background: #c4c4c4;
+  }
+  &__block {
+    height: 35px;
+    background: #c4c4c4;
+    margin-top: 15px;
+  }
+}
